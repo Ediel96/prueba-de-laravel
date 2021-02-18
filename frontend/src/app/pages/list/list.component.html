@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Correo</th>
+        <th scope="col">telefono</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of datas">
+        <th scope="row">{{data.id}}
+        <td>{{data.nombre}}</td>
+        <td>{{data.apellido}}</td>
+        <td>{{data.correo}}</td>
+        <td>{{data.telefono}}</td>
+      </tr>
+    </tbody>
+  </table>

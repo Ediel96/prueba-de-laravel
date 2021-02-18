@@ -14,17 +14,17 @@ class CreateUsuariosTable extends Migration
     public function up()
     {
         Schema::create('usuarios', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('nombre', 191);
             $table->string('apellido', 191);
             $table->string('correo', 191);
             $table->string('telefono', 191);
             $table->integer("rol_id")->unsigned();
 
-            $table->foreign("rol_id")->references("id")->on("roles")
-                ->onDelete("cascade")
-                ->onUpdate("cascade");
-        // $table->timestamps();
+            // $table->foreign("rol_id")->references("id")->on("roles")
+            //     ->onDelete("cascade")
+            //     ->onUpdate("cascade");
+            $table->timestamps();
         });
     }
 

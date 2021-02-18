@@ -29,6 +29,7 @@ class UsuarioController extends Controller
             $usuario->apellido = $request->apellido;
             $usuario->correo = $request->correo;
             $usuario->telefono = $request->telefono;
+            $usuario->rol_id = $request->rol_id;
 
             $usuario->save();
         // return usuarios::create($request->all);
